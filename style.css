@@ -1,0 +1,452 @@
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, rgba(255,140,0,0.15), rgba(255,0,128,0.15));
+    backdrop-filter: blur(4px);
+    color: #333;
+    transition: .3s;
+    
+}
+
+/* Dark Mode */
+body.dark {
+    background: #111;
+    color: #fff;
+}
+
+body.dark .navbar {
+    background: #000;
+}
+
+body.dark .section,
+body.dark .project-card,
+body.dark .social-card,
+body.dark .skill-card {
+    background: #1c1c1c;
+    color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    align-items: center;       /* vertically center */
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: #222;
+    color: #fff;
+    border-bottom: 4px solid #ff9800;
+}
+
+/* Logo */
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;          /* FIX: no blue color */
+    font-weight: 500;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #ff9800;       /* orange hover effect */
+}
+
+/* Theme Toggle Button */
+.theme-btn {
+    font-size: 22px;
+    background: none;
+    border: none;
+    color: #ffcc80;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: .3s;
+}
+
+.theme-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Hero */
+.hero {
+ height: 90vh;
+    background-repeat: no-repeat;       /* DON'T repeat */
+     background-size: cover;             /* fill area, crop if needed */
+    background-position: center center; /* center focal point */
+    background-attachment: scroll;  
+    color: #fff;
+    display: flex;
+    padding: 0 80px;
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    align-items: center;
+    /* background-size: 300% 300%; */
+    background: url(background.jpeg) no-repeat center center/cover;
+}
+.hero-left {
+    flex: 1;
+}
+/* Right side text block */
+.hero-right {
+    flex: 1;
+    text-align: left;
+    color: #010409;
+    position: relative;
+    z-index: 2;
+    margin-top: -350px;
+    margin-left: 455px;
+}
+/* Heading styling */
+.hero-right h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px #000;
+}
+
+/* Subtext */
+.hero-right p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 6px #000;
+}
+
+/* Explore button */
+.hero-right .btn {
+    padding: 12px 25px;
+    background: #d68126;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 0 0 12px rgba(0,0,0,0.4);
+}
+.hero .btn{
+
+    background-color: #c77d05;
+}
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero h1, .hero p {
+    text-shadow: 1px 1px 4px rgba(200, 9, 9, 0.4);
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #ffa726;
+    object-fit: cover;
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    transition: .3s;
+}
+
+/* Social Section */
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-card {
+    padding: 12px 25px;
+    background: #ffe0b2;
+    border-radius: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #222;
+    transition: .3s;
+}
+
+.social-card:hover {
+    transform: scale(1.1);
+    background: #ffb74d;
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill-card {
+    padding: 15px 25px;
+    background: #ffe0b2;
+    border-radius: 10px;
+    transition: .3s;
+    font-weight: bold;
+}
+
+.skill-card:hover {
+    transform: scale(1.1);
+}
+
+/* Projects */
+.project-card {
+    width: 300px;
+    background: #ffe4c4;
+    border-radius: 10px;
+    padding: 15px;
+    transition: .3s;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.05);
+}
+
+.project-card .icon {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    background: #222;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #000;
+}
+
+/* Animations */
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s forwards;
+}
+
+.delay { animation-delay: .3s; }
+.delay2 { animation-delay: .6s; }
+.delay3 { animation-delay: .9s; }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 15px;
+    }
+    .logo {
+        font-size: 18px;
+    }
+}
+/* CONTACT FORM FIXED */
+.contact-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#contactForm {
+    width: 400px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* textarea height fix */
+#contactForm textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Dark mode compatibility */
+body.dark #contactForm {
+    background: #1c1c1c;
+    border: 1px solid #444;
+}
+
+body.dark #contactForm input,
+body.dark #contactForm textarea {
+    background: #222;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+/* CONTACT BOX WITH GRADIENT BORDER */
+.contact-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#contactForm {
+    width: 420px;
+    padding: 25px;
+    border-radius: 12px;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+
+    /* gradient border */
+    border: 4px solid;
+    border-image: linear-gradient(45deg, #ff9800, #ff4d00, #ff0099) 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+/* floating label wrapper */
+.floating-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.floating-group input,
+.floating-group textarea {
+    width: 100%;
+    padding: 15px 12px;
+    font-size: 16px;
+    border: 2px solid #bbb;
+    border-radius: 6px;
+    background: transparent;
+    outline: none;
+    transition: .3s;
+}
+
+.floating-group textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* floating labels */
+.floating-group label {
+    position: absolute;
+    top: 15px;
+    left: 14px;
+    font-size: 15px;
+    color: #777;
+    pointer-events: none;
+    transition: .3s;
+}
+
+/* input active effect */
+.floating-group input:focus,
+.floating-group textarea:focus {
+    border-color: #ff9800;
+}
+
+/* floating animation */
+.floating-group input:focus + label,
+.floating-group input:not(:placeholder-shown) + label,
+.floating-group textarea:focus + label,
+.floating-group textarea:not(:placeholder-shown) + label {
+    top: -9px;
+    left: 10px;
+    font-size: 12px;
+    color: #ff9800;
+    background: #fff;
+    padding: 0 4px;
+}
+
+/* DARK MODE FIX */
+body.dark #contactForm {
+    background: #1a1a1a;
+    border-image: linear-gradient(45deg, #ffb84d, #ff704d, #ff33cc) 1;
+}
+
+body.dark .floating-group input,
+body.dark .floating-group textarea {
+    background: #222;
+    color: #fff;
+    border-color: #555;
+}
+
+body.dark .floating-group label {
+    color: #ccc;
+}
+
+/* LABEL FLOAT DARK */
+body.dark .floating-group input:focus + label,
+body.dark .floating-group textarea:focus + label {
+    background: #1a1a1a;
+}
+
+/* GLOW SEND BUTTON */
+.glow-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #ff9800, #ff4d00, #ff0099);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 0 12px rgba(255, 77, 0, 0.7);
+    animation: pulse 1.5s infinite;
+}
+
+.glow-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 0, 128, 0.8);
+}
+
+/* glowing animation */
+@keyframes pulse {
+    0% { box-shadow: 0 0 10px rgba(255, 77, 0, 0.7); }
+    50% { box-shadow: 0 0 20px rgba(255, 0, 128, 1); }
+    100% { box-shadow: 0 0 10px rgba(255, 77, 0, 0.7); }
+}
+
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anshul Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+    <nav class="navbar">
+        <div class="logo">My Portfolio</div>
+
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Theme Button -->
+        <button id="themeToggle" class="theme-btn">🌙</button>
+    </nav>
+</header>
+
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+       <div class="hero-left"></div>
+
+    <div class="hero-right">
+        <h1>Hello, I'm Anshul</h1>
+        <p>A Passionate Web Developer</p>
+        <a href="#projects" class="btn animate delay2">Explore</a>
+    </div>
+    </section>
+
+    <!-- Profile Picture -->
+    <section class="section">
+        <h2>My Profile</h2>
+        <img src="myimage.jpeg" class="profile-pic animate" alt="My Photo">
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+        <h2 class="animate">About Me</h2>
+        <p class="animate delay">
+            I love building responsive, modern and animated websites using HTML, CSS & JavaScript.
+        </p>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="social" class="section">
+        <h2 class="animate">Connect With Me</h2>
+        <div class="social-container animate delay">
+            <a href="https://www.linkedin.com/in/anshul-meshram-93ba41214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank" class="social-card">🔗 LinkedIn</a>
+            <a href="https://www.instagram.com/mr._meshram10?igsh=MTMwYmhlaTBlOHcwcg==" target="_blank"
+                class="social-card">📸 Instagram</a>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+        <h2 class="animate">Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card animate">HTML</div>
+            <div class="skill-card animate delay">CSS</div>
+            <div class="skill-card animate delay2">JavaScript</div>
+            <div class="skill-card animate delay3">React</div>
+            <div class="skill-card animate delay4">Node.js</div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <h2 class="animate">Projects</h2>
+        <div class="project-container">
+
+            <div class="project-card animate delay">
+                <img src="coming.webp" alt="Coming soon">
+                <h3>New Project 😎</h3>
+                <p>Coming Soon… More updates soon!</p>
+                <div class="icon">⚡</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+<section id="contact" class="section">
+    <h2 class="animate">Contact Me</h2>
+
+    <div class="contact-box animate delay">
+        <form id="contactForm">
+            
+            <div class="floating-group">
+                <input type="text" name="user_name" required>
+                <label>Your Name</label>
+            </div>
+
+            <div class="floating-group">
+                <input type="email" name="user_email" required>
+                <label>Your Email</label>
+            </div>
+
+            <div class="floating-group">
+                <textarea name="message" required></textarea>
+                <label>Your Message</label>
+            </div>
+
+            <button type="submit" class="glow-btn">Send ✉️</button>
+        </form>
+    </div>
+
+    <p id="statusMessage"></p>
+</section>
+
+    <footer>
+        <p>© 2025 Anshul | All Rights Reserved</p>
+    </footer>
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
